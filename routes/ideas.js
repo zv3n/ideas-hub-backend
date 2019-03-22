@@ -3,17 +3,18 @@ const router = express.Router()
 const uuidv1 = require('uuid/v1')
 const Ideas = require('../models/Ideas')
 
-router.get('/', (req, res) => {
+router.get('/getall', (req, res) => {
   Ideas.find()
-    .then(games => res.json(ideas))
+    .then(ideas => res.json(ideas))
     .catch(err => res.json(err))
 })
 
-router.post('/NewCardInputForm', (req, res) => {
-  req.body.id = uuidv1()
+router.post('/create', (req, res) => {
+  console.log(req.body)
+  // req.body.id = uuidv1()
 
   Ideas.create(req.body)
-    .then(game => res.json(game))
+    .then(idea => res.json(idea))
     .catch(err => res.json(err))
 })
 

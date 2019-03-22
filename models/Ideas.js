@@ -1,14 +1,11 @@
 const mongoose = require('mongoose')
 
 const IdeaSchema = new mongoose.Schema({
-  id: {
-    type: mongoose.SchemaTypes.String,
-  },
   title: {
-    type: mongoose.SchemaTypes.String,
+    type: String,
   },
   comment: {
-    type: mongoose.SchemaTypes.String,
+    type: String,
   },
 })
 
