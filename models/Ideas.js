@@ -7,6 +7,9 @@ const IdeaSchema = new mongoose.Schema({
   comment: {
     type: String,
   },
+  image: {
+    type: String,
+  },
 })
 
 module.exports = mongoose.model('Ideas', IdeaSchema)
