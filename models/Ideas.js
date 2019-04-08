@@ -9,6 +9,8 @@ const IdeaSchema = new mongoose.Schema({
   },
   image: {
     type: String,
+    default:
+      'https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80',
   },
 })
 
